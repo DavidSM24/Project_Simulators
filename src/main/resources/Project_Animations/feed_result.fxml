@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="439.0" style="-fx-background-image: url('file:src/main/resources/images/result_background.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Animations.Result_Controller">
+   <children>
+      <Label text="Resultados" textFill="WHITE">
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="223.6666259765625" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="189.66668701171872" minWidth="10.0" prefWidth="166.33337402343747" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <VBox.margin>
+            <Insets left="30.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Nivel de Drogon : " textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Turnos Jugados : " textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Bauhaus 93" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Puntuación Máxima : " textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Bauhaus 93" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lab_result_lv" text="Label" textFill="WHITE" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lab_result_score" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lab_result_turns" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

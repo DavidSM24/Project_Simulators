@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="800.0" style="-fx-background-image: url('file:src/main/resources/images/targarean.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Animations.Feed_Simulator_Controller">
+   <right>
+      <GridPane prefHeight="400.0" prefWidth="246.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="335.3333333333333" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="335.3333333333333" minHeight="10.0" prefHeight="225.66666666666663" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="335.3333333333333" minHeight="0.0" prefHeight="41.99998982747394" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="127.66665649414062" minHeight="0.0" prefHeight="52.00001017252606" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </BorderPane.margin>
+         <children>
+            <ProgressBar fx:id="pb" prefWidth="200.0" progress="0.0" GridPane.rowIndex="3" />
+            <Label text="Drogon" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="227.0" fitWidth="245.0" pickOnBounds="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/drogon.jpeg" />
+               </image>
+            </ImageView>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="118.3333740234375" minWidth="10.0" prefWidth="66.3333740234375" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="182.33331298828125" minWidth="10.0" prefWidth="179.6666259765625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lab_drogon_score" text="score" textFill="#ff6600" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Bauhaus 93" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lab_drogon_lv" text="Lv 1" textFill="WHITE">
+                     <font>
+                        <Font name="Bauhaus 93" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </right>
+   <bottom>
+      <GridPane fx:id="gp_select_Buttons" prefHeight="134.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="91.66668701171875" minHeight="10.0" prefHeight="91.66668701171875" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="52.33331298828125" minHeight="10.0" prefHeight="22.33331298828125" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#to_Feed" text="Alimentar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" GridPane.halignment="CENTER">
+               <children>
+                  <ImageView fx:id="img_button_1" fitHeight="89.0" fitWidth="252.0" onMouseClicked="#select_1" pickOnBounds="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../images/money.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;">
+                     <children>
+                        <ImageView fx:id="img_button_2" fitHeight="89.0" fitWidth="252.0" onMouseClicked="#select_2" pickOnBounds="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@../images/money.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;">
+                     <children>
+                        <ImageView fx:id="img_button_3" fitHeight="89.0" fitWidth="252.0" onMouseClicked="#select_3" pickOnBounds="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@../images/money.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </bottom>
+   <center>
+      <GridPane prefHeight="368.0" prefWidth="294.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="268.6666564941406" minHeight="10.0" prefHeight="162.00001017252603" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="233.33333333333334" minHeight="10.0" prefHeight="198.6666564941406" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <ImageView fx:id="imv_feed" fitHeight="128.0" fitWidth="285.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/money.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" GridPane.rowIndex="1">
+               <children>
+                  <GridPane prefHeight="235.0" prefWidth="292.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="139.3333307902018" minHeight="10.0" prefHeight="35.3333371480306" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="139.3333307902018" minHeight="10.0" prefHeight="89.99999618530273" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="44.66666920979819" valignment="TOP" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="52.333343505859375" minHeight="10.0" prefHeight="42.33333333333334" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="52.333343505859375" minHeight="10.0" prefHeight="42.33333333333334" valignment="TOP" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lab_feed_score" text="points" textFill="#29cd52" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Bauhaus 93" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab_feed_fury" text="fury" textFill="#e80d0d" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Bauhaus 93" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab_feed_acert" text="acert" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Bauhaus 93" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab_feed_description" contentDisplay="CENTER" text="afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" textFill="WHITE" wrapText="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Bauhaus 93" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab_feed_name" contentDisplay="CENTER" text="name" textFill="WHITE" underline="true" wrapText="true">
+                           <font>
+                              <Font name="Bauhaus 93" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <MediaView fx:id="media" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
