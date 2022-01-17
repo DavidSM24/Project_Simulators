@@ -109,6 +109,13 @@ public class Feed_Simulator_Controller {
 		
 		media=new MediaView();
 		
+		File filestring = new File("src/main/resources/media/feed_ost.mp3");
+		Media media2 = new Media(filestring.toURI().toString());
+		MediaPlayer mp = new MediaPlayer(media2);
+		
+		media.setMediaPlayer(mp);
+		mp.play();
+		
 		play();
 	}
 

@@ -83,7 +83,10 @@
             <Insets left="20.0" right="20.0" />
          </padding>
          <children>
-            <Button mnemonicParsing="false" onMouseClicked="#to_Feed" text="Alimentar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onMouseClicked="#to_Feed" style="-fx-background-color: white; -fx-border-color: black;" text="Alimentar" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Bauhaus 93" size="18.0" />
+               </font></Button>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" GridPane.halignment="CENTER">
                <children>
                   <ImageView fx:id="img_button_1" fitHeight="89.0" fitWidth="252.0" onMouseClicked="#select_1" pickOnBounds="true" VBox.vgrow="ALWAYS">
