@@ -5,10 +5,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="448.0" style="-fx-background-image: url('file:src/main/resources/images/selectback.jpg');" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="448.0" style="-fx-background-image: url('file:src/main/resources/images/selectback.jpg');" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Animations.Main_Selector_Controller">
    <children>
-      <Button mnemonicParsing="false" prefHeight="111.0" prefWidth="227.0" style="-fx-background-color: red;" text="Simulación Robo al Tesoro Nacional" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button mnemonicParsing="false" onAction="#open_Theft_Simulator" prefHeight="111.0" prefWidth="227.0" style="-fx-background-color: red;" text="Simulación Robo al Tesoro Nacional" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <HBox.margin>
             <Insets bottom="20.0" left="30.0" right="20.0" top="20.0" />
          </HBox.margin>
@@ -16,7 +15,7 @@
             <Font name="Bauhaus 93" size="22.0" />
          </font>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="111.0" prefWidth="227.0" style="-fx-background-color: orange;" text="Minijuego Alimenta a Drogon" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button fx:id="btn_feed" mnemonicParsing="false" onAction="#open_Feed_Simulator" prefHeight="111.0" prefWidth="227.0" style="-fx-background-color: orange;" text="Minijuego Alimenta a Drogon" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <HBox.margin>
             <Insets bottom="20.0" left="20.0" right="30.0" top="20.0" />
          </HBox.margin>

@@ -1,6 +1,7 @@
 package Project_Animations;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -266,11 +267,37 @@ public class Feed_Simulator_Controller {
 				@Override
 				public void handle(WindowEvent e) {
 					try {
-
+						stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+						       @Override
+						       public void handle(WindowEvent e) {  	   	
+						    	   
+									try {
+										FXMLLoader loader = new FXMLLoader(getClass().getResource("feed_simulator.fxml"));
+										Parent root;
+										root = loader.load();
+										Scene scene= new Scene(root);
+										Stage stage= new Stage();
+										Image icon= new Image("file:src/main/resources/images/gotlogo.png");
+										stage.getIcons().add(icon);
+										stage.setTitle("Minijuego: Alimenta a Drogon");
+										stage.setScene(scene);
+										stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+										       @Override
+										       public void handle(WindowEvent e) {
+										    	   System.exit(0);
+										       }
+										    });
+										stage.show();
+									} catch (IOException e1) {
+										// TODO Auto-generated catch block
+										e1.printStackTrace();
+									}
+									
+						       }
+						    });
 					} catch (Exception e2) {
 						// TODO: handle exception
 					}
-					System.exit(0);
 				}
 			});
 

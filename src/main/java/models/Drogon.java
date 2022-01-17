@@ -91,17 +91,14 @@ public class Drogon extends Thread {
 		// calcular lv
 		if (score > 999)
 			lv = 2;
-		else if (score > 2999)
+		if (score > 2999)
 			lv = 3;
-		else if (score > 4999)
+		if (score > 4999)
 			lv = 4;
-		else if (score > 6999)
+		if (score > 6999)
 			lv = 5;
-		else
+		if(score<1000)
 			lv = 1;
-
-		System.out.println("Drogon ha comido " + bowl.getFeed().getName() + ", score -> " + score + ", fury -> " + fury);
-
 	}
 
 	@Override

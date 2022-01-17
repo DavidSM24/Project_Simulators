@@ -202,8 +202,8 @@ public class TheftSimulator_Controller {
 				wc.setController(list);
 				Scene scene= new Scene(root);
 				Stage stage= new Stage();
-				//Image icon= new Image("file:src/main/resources/images/icons/icon_chara_creator.jpg");
-				//stage.getIcons().add(icon);
+				Image icon= new Image("file:src/main/resources/images/lcplogo.png");
+				stage.getIcons().add(icon);
 				stage.setTitle("Resultados");
 				stage.setScene(scene);
 				stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
@@ -216,9 +216,9 @@ public class TheftSimulator_Controller {
 								root = loader.load();
 								Scene scene= new Scene(root);
 								Stage stage= new Stage();
-								//Image icon= new Image("file:src/main/resources/images/icons/icon_chara_creator.jpg");
-								//stage.getIcons().add(icon);
-								stage.setTitle("Resultados");
+								Image icon= new Image("file:src/main/resources/images/lcplogo.png");
+								stage.getIcons().add(icon);
+								stage.setTitle("Simulación: Robo al Tesoro Nacional");
 								stage.setScene(scene);
 								stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 								       @Override
